@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import os
 
-df = pd.read_csv('movie.csv', sep=',')
+df = pd.read_csv('E:\PROJECT\Python-Pro\movies-sentiment-analysis\movie.csv', sep=',')
 df.head
 
 ## Data cleaning
