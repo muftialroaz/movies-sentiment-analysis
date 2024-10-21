@@ -4,7 +4,7 @@ The Movie Sentiment Analysis project aims to analyze user sentiments or opinions
 
 In this project, I will use sentiment analysis techniques to classify movie reviews as positive or negative. The main goal of sentiment analysis is to understand the opinions, feelings, or responses contained within user reviews. 
 
-Thus, this project will provide insights into the comparison between Scikit-Learn and CuML in the context of a sentiment analysis project.
+Thus, this project will provide insights into the comparison between the Scikit-Learn Random Forest and the CuML Random Forest algorithms within the context of a sentiment analysis project.
 
 
 ## Dataset
@@ -13,9 +13,9 @@ Dataset: https://www.kaggle.com/datasets/yasserh/imdb-movie-ratings-sentiment-an
 Target: 0 - Negative, 1 - Positive
 
 ## Results
-Based on the evaluation metrics, the results of the classification performance are as follows.
+Based on the evaluation metrics, the results of the classification performance for the Random Forest algorithm are as follows.
 
-|        | Scikit-Learn         | CuML         |
+|        | Scikit-Learn RFC        | CuML RFC        |
 |--------|-------------|--------|
 | Prec   | 0.8185 | 0.8117 | 
 | Rec    | 0.8185 | 0.81  | 
