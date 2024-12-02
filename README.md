@@ -17,12 +17,21 @@ Based on the evaluation metrics, the results of the classification performance f
 
 |        | Scikit-Learn RFC        | CuML RFC        |
 |--------|-------------|--------|
-| Prec   | 0.8185 | 0.8117 | 
-| Rec    | 0.8185 | 0.81  | 
-| F1     | 0.8184 | 0.8098 | 
-| Running Time     | 15.48 s | 1.41 s |
+| Prec   | 0.8166 | 0.8117 | 
+| Rec    | 0.8165 | 0.81  | 
+| F1     | 0.8164 | 0.8098 | 
+| Running Time     | 15.51 s | 1.12 s |
+
+|        | Scikit-Learn SVM        | CuML SVM        |
+|--------|-------------|--------|
+| Prec   | 0.8505 | 0.8502 | 
+| Rec    | 0.8505 | 0.8502 | 
+| F1     | 0.8505 | 0.8502 | 
+| Running Time     | 93.17 s | 2.54 s |
+
+
 
 ## Conclusion
-The classification performance results indicate that both Scikit-Learn and CuML achieved similar precision and recall scores, with Scikit-Learn slightly outperforming CuML in these metrics. However, CuML demonstrated a significantly faster running time, completing the task in just 1.41 seconds compared to Scikit-Learn's 15.48 seconds.
+The classification performance results indicate that both Scikit-Learn and CuML achieved similar precision and recall scores, with Scikit-Learn slightly outperforming CuML in these metrics. However, CuML demonstrated a significantly faster running time compared to Scikit-Learn.
 
 In summary, while Scikit-Learn offers marginally better accuracy, CuML provides a much more efficient solution in terms of speed, making it a compelling choice for applications where time is critical.
