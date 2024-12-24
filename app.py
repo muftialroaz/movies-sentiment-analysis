@@ -29,16 +29,21 @@ except FileNotFoundError:
 # Display sample data for review
 # st.dataframe(k_samples)
 
-# Predict sentiment if reviews are provided
+# Predict sentiment and confidence score if reviews are provided
 if reviews:
     if reviews.strip():  # Check if the input is not empty
         tfidf = vectorizer.transform([reviews])  # Transform the user input
         y_pred = lr_model.predict(tfidf)
+        y_prob = lr_model.predict_proba(tfidf)  # Get the predicted probabilities
         
-        # Display the sentiment result
+        # The probability for class 1 (positive sentiment) is the second column in the output
+        positive_prob = y_prob[0][1]
+        
+        # Display the sentiment result with confidence score
         if y_pred[0] == 1:
-            st.success("Sentiment: Positive")
+            st.success(f"Sentiment: Positive | Confidence: {positive_prob * 100:.2f}%")
         else:
-            st.error("Sentiment: Negative")
+            negative_prob = y_prob[0][0]
+            st.error(f"Sentiment: Negative | Confidence: {negative_prob * 100:.2f}%")
     else:
         st.warning("Please enter a review to get the sentiment.")
